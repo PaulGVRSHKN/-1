@@ -12,6 +12,7 @@
 .header {
   display: flex;
   position: relative;
+  align-items: center;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -22,22 +23,20 @@
 }
 
 .logo_place_header {
+  position: absolute;
   top: 30px;
   left: 64px;
 }
 
 .logo {
-  position: absolute;
   z-index: 2;
   height: 32px;
   width: 183px;
 }
 
 .header__title {
-  display: flex;
-  align-items: center;
   z-index: 2;
-  width: 730px;
+  max-width: 730px;
   margin-left: 64px;
   color: black;
   line-height: 96px;
@@ -48,7 +47,8 @@
 .header__subtitle {
   position: absolute;
   z-index: 2;
-  width: 388px;
+  max-width: 388px;
+  margin: 0;
   left: 64px;
   bottom: 30px;
   line-height: 25px;
@@ -86,17 +86,18 @@
 .description {
   display: flex;
   justify-content: center;
+  margin-top: 100px;
 }
 
 .two-columns {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin-top: 100px;
   align-items: baseline;
 }
 
 .two-columns__brief {
+  margin: 0;
   width: 175px;
   color: #2f80ed;
   line-height: 1.2;
@@ -110,9 +111,16 @@
 }
 
 .two-columns__paragraph {
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 30px;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+}
+
+.two-columns__paragraph:last-of-type {
+  margin-bottom: 0;
 }
 
 .two-columns__span-accent {
@@ -125,11 +133,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 100px;
 }
 
 .section-title {
   width: 60%;
-  margin-top: 100px;
+  margin-top: 0;
   margin-bottom: 0;
   text-align: center;
   line-height: 1.15;
@@ -153,8 +162,6 @@
   flex-direction: row;
   justify-content: space-between;
   width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .table__cell {
@@ -172,32 +179,27 @@
 
 .table__text {
   margin-top: 20px;
+  margin-bottom: 0;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
 }
 
 .feynman {
-  height: 790px;
+  min-height: 790px;
+  padding-top: 100px;
   margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f2f2f2;
   position: relative;
-}
-
-.feynman_pic {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 867px;
-  height: 637px;
-  align-self: flex-end;
+  background-image: url(../images/feynman.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
 }
 
 .feynman__title {
-  margin-top: 100px;
   margin-bottom: 70px;
   width: 648px;
   text-align: center;
@@ -208,6 +210,7 @@
 }
 
 .feynman__subtitle {
+  margin: 0;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
@@ -234,32 +237,24 @@
   flex-direction: column;
   background-color: #1f1f1f;
   position: relative;
+  padding-top: 90px;
+  padding-bottom: 90px;
   overflow: hidden;
   align-items: center;
 }
 
 .section-title_theme_dark {
   color: white;
-  top: 90px;
   bottom: 0;
-  width: 60%;
-  line-height: 1.15;
-  font-size: 60px;
-  font-weight: bold;
 }
 
 .section-subtitle_theme_dark {
-  width: 60%;
-  top: 20px;
-  bottom: 0;
   color: white;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
 }
 
 .table_theme_dark {
-  margin: 0 auto 90px auto;
+  margin-top: 0;
+  margin-bottom: 90px;
   z-index: 1;
 }
 
@@ -267,7 +262,7 @@
 .table__cell_theme_dark {
   width: 200px;
   color: white;
-  top: 80px;
+  margin-top: 80px;
 }
 
 .table__heading_theme_dark {
@@ -276,17 +271,19 @@
   font-weight: bold;
 }
 
+/* Если этот блок полностью повторяет блок table__text, то нужен ли он вообще или можно удалить?
 .table__text_theme_dark {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
   top: 20px;
-}
+}*/
 
 .kaufman__triangle {
+  background-image: url(../images/kaufman-triangle.svg);
+  position: absolute;
   width: 877px;
   height: 877px;
-  position: absolute;
   top: 0;
   right: -210px;
   z-index: 0;
@@ -314,6 +311,7 @@
 }
 
 .footer__author {
+  margin: 0;
   margin-top: auto;
   padding-top: 18px;
   padding-bottom: 18px;
@@ -324,7 +322,6 @@
 }
 
 .logo_place_footer {
-  flex-direction: row;
   align-items: flex-start;
   height: 35px;
   width: 183px;
@@ -363,6 +360,6 @@
   width: 16px;
 }
 
-ul {
+li {
   list-style: none;
 }
