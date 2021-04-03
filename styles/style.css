@@ -168,6 +168,7 @@
   margin-top: 60px;
   margin-bottom: 0;
   width: 250px;
+  list-style: none;
 }
 
 .table__heading {
@@ -246,10 +247,12 @@
 .section-title_theme_dark {
   color: white;
   bottom: 0;
+  z-index: 1;
 }
 
 .section-subtitle_theme_dark {
   color: white;
+  z-index: 1;
 }
 
 .table_theme_dark {
@@ -271,17 +274,10 @@
   font-weight: bold;
 }
 
-/* Если этот блок полностью повторяет блок table__text, то нужен ли он вообще или можно удалить?
-.table__text_theme_dark {
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
-  top: 20px;
-}*/
-
 .kaufman__triangle {
   background-image: url(../images/kaufman-triangle.svg);
   position: absolute;
+  background-size: contain;
   width: 877px;
   height: 877px;
   top: 0;
@@ -344,6 +340,7 @@
   margin: 0;
   color: white;
   padding: 20px 0 16px;
+  list-style: none;
 }
 
 .footer__column-link {
@@ -358,8 +355,4 @@
   padding-right: 10px;
   height: 16px;
   width: 16px;
-}
-
-li {
-  list-style: none;
 }
