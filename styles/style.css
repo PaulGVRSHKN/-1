@@ -37,6 +37,7 @@
 .header__title {
   z-index: 2;
   max-width: 730px;
+  margin: 0;
   margin-left: 64px;
   color: black;
   line-height: 96px;
@@ -157,6 +158,8 @@
 }
 
 .table {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -201,6 +204,7 @@
 }
 
 .feynman__title {
+  margin: 0;
   margin-bottom: 70px;
   width: 648px;
   text-align: center;
