@@ -1,0 +1,14 @@
+.footer__author {
+  margin: 0;
+  margin-top: auto;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  color: white;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.footer__author::before {
+  content: '\A9';
+}
